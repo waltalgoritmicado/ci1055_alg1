@@ -1,5 +1,6 @@
 program par_impar;
 var n : longint;
+
 { programa principal }
 begin
 	read(n);
@@ -7,5 +8,6 @@ begin
 		write('IMPAR')
 	else
 		write('PAR');
+
 end.
 
