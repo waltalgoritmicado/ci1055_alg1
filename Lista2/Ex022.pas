@@ -1,20 +1,23 @@
-program imprime_multiplo;
-var n : longint;
+program imprime_quadrante;
+var X, Y : integer;
 
-{ programa principal }
+{ program principal }
 begin
-	read(n);
-	if ((n MOD 7 <> 0) and (n MOD 11 <> 0)) then
-		write('Nao e multiplo nem de 7 nem de 11')
-	else 
-		begin
-			if ((n MOD 7 = 0 )) and (n MOD 11 = 0 )) then
-				write('Multiplo de 7 e de 11')
-			else if (n MOD 7 = 0)) then
-				write('Multiplo exclusivamente de 7')
-			else
-				write('Multiplo exclusivamente de 11');
-		end;
+	read(X, Y);
+	if (X = 0) and (Y = 0) then
+		write('O')
+	else if (X <> 0) and (Y = 0) then
+		write('X')
+	else if (Y <> 0) and (X = 0) then
+		write('Y')
+	else if (X > 0) and (Y > 0) then
+		write(1)
+	else if (X > 0) and (Y < 0) then
+		write(4)
+	else if (X < 0) and (Y > 0) then
+		write(2)
+	else
+		write(3);
 
 end.
 
